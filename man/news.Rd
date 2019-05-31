@@ -22,6 +22,9 @@ search_news(keyword = NULL, country = NULL, language = NULL,
 
 \item{type}{Type of content to return \code{1} for news, \code{2} for article and \code{3} for discussion content. If \code{NULL} all 3 types are choosen.}
 }
+\value{
+A \link[tibble]{tibble}
+}
 \description{
 Return latest news or specific articles.
 }

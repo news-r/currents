@@ -9,6 +9,9 @@ currents_key(key)
 \arguments{
 \item{key}{Your api key as from \url{https://currentsapi.services}.}
 }
+\value{
+A \link[tibble]{tibble}
+}
 \description{
 Setup your session by specifiying your API key to be used in subsequent calls.
 }

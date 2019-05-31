@@ -1,11 +1,10 @@
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-
-
-# currents
-
 <!-- badges: start -->
 [![Travis build status](https://travis-ci.org/news-r/currents.svg?branch=master)](https://travis-ci.org/news-r/currents)
 <!-- badges: end -->
+
+# currents
+
+Integrates the [currents API](https://currentsapi.services/) with R.
 
 ## Installation
 
@@ -24,8 +23,7 @@ library(currents)
 currents_key("xXxxxXXXxXXxXxx")
 ```
 
-Then use `latest_news` or `search_news`
-
+Then use `latest_news` or `search_news`.
 
 ```r
 search_news(keyword = "Trump", country = "US")

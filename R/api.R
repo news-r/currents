@@ -11,6 +11,8 @@
 #' currents_key("xxXXxxXxXxXXXxxXx")
 #' }
 #' 
+#' @return A \link[tibble]{tibble}
+#' 
 #' @import assertthat
 #' @export
 currents_key <- function(key){
@@ -34,6 +36,8 @@ currents_key <- function(key){
 #' 
 #' news <- search_news("Trump")
 #' }
+#' 
+#' @return A \link[tibble]{tibble}
 #' 
 #' @name news
 #' @export
