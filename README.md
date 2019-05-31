@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/news-r/currents.svg?branch=master)](https://travis-ci.org/news-r/currents)
+
 # currents
 
 Integrates the [currents API](https://currentsapi.services/) with R.
