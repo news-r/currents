@@ -7,3 +7,10 @@ VERSION <- "v1"
   assert_that(nchar(key) > 1, msg = "Missing key")
   return(key)
 }
+
+# process posix to RFC 3339
+.process_posix <- function(x = NULL){
+  if(!is.null(x))
+    x <- format(x, "%Y-%m-%dT%H:%M:%S%z")
+  return(x)
+}

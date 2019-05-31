@@ -2,4 +2,5 @@
 
 export(currents_key)
 export(latest_news)
+export(search_news)
 import(assertthat)

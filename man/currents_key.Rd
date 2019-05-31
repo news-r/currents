@@ -15,3 +15,9 @@ Setup your session by specifiying your API key to be used in subsequent calls.
 \note{
 You can specify \code{CURRENTS_API_KEY} in your \code{.Renviron}.
 }
+\examples{
+\dontrun{
+currents_key("xxXXxxXxXxXXXxxXx")
+}
+
+}
