@@ -22,11 +22,11 @@ Specify you API key with `currents_key` or put it in your `.Renviron` as `CURREN
 ```r
 library(currents)
 
-currents_key("xXxxxXXXxXXxXxx")
+currents_key("xXxxXXXxXXxXxx")
 ```
 
-Then use `latest_news` or `search_news`
+Then use `cur_latest` or `cur_search`.
 
 ```{r}
-search_news(keyword = "Trump", country = "US")
+cur_search(keyword = "Trump", country = "US")
 ```

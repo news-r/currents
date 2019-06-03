@@ -41,7 +41,7 @@ currents_key <- function(key){
 #' 
 #' @name news
 #' @export
-latest_news <- function(){
+cur_latest <- function(){
   url <- httr::parse_url(BASE_URL)
   url$path <- c(VERSION, "latest-news")
   url <- httr::build_url(url)
@@ -52,7 +52,7 @@ latest_news <- function(){
 
 #' @rdname news
 #' @export
-search_news <- function(keyword = NULL, country = NULL, language = NULL, start_date = NULL, end_date = NULL, type = NULL){
+cur_search <- function(keyword = NULL, country = NULL, language = NULL, start_date = NULL, end_date = NULL, type = NULL){
   url <- httr::parse_url(BASE_URL)
   url$path <- c(VERSION, "search")
   url$query <- list(

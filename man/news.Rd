@@ -2,13 +2,13 @@
 % Please edit documentation in R/api.R
 \name{news}
 \alias{news}
-\alias{latest_news}
-\alias{search_news}
+\alias{cur_latest}
+\alias{cur_search}
 \title{News}
 \usage{
-latest_news()
+cur_latest()
 
-search_news(keyword = NULL, country = NULL, language = NULL,
+cur_search(keyword = NULL, country = NULL, language = NULL,
   start_date = NULL, end_date = NULL, type = NULL)
 }
 \arguments{
