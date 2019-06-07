@@ -1,6 +1,6 @@
 Package: currents
 Title: Capture the World News Through Simple 'JSON' Web 'API'
-Version: 0.0.0.1
+Version: 0.0.1
 Authors@R: 
     person(given = "John",
            family = "Coene",
