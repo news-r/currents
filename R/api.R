@@ -66,5 +66,7 @@ cur_search <- function(keyword = NULL, country = NULL, language = NULL, start_da
   url <- httr::build_url(url)
   response <- httr::GET(url, httr::add_headers(Authorization = .get_key()))
   content <- httr::content(response)
-  purrr::map_df(content[["news"]], tibble::as_tibble)
+  data <- purrr::map_df(content[["news"]], tibble::as_tibble)
+  data$category <- unlist(data$category)
+  return(data)
 }
