@@ -8,19 +8,25 @@
 \usage{
 cur_latest()
 
-cur_search(keyword = NULL, country = NULL, language = NULL,
-  start_date = NULL, end_date = NULL, type = NULL)
+cur_search(
+  keyword = NULL,
+  country = NULL,
+  language = NULL,
+  start_date = NULL,
+  end_date = NULL,
+  category = NULL
+)
 }
 \arguments{
 \item{keyword}{Restict the search to articles that mention a specific keyword.}
 
-\item{country}{An \code{ISO 2} country code, full list of valid codes is available at \url{https://currentsapi.services/documents}.}
+\item{country}{An \code{ISO 2} country code, see \code{\link{cur_avail_regions}} for a full list.}
 
-\item{language}{An \code{ISO 2} language code, full list of valid codes is available at \url{https://currentsapi.services/documents}.}
+\item{language}{An \code{ISO 2} language code, see \code{\link{cur_avail_languages}} for a full lis.}
 
 \item{start_date, end_date}{Start and end dates, either as \code{Date} or \code{POSIX}.}
 
-\item{type}{Type of content to return \code{1} for news, \code{2} for article and \code{3} for discussion content. If \code{NULL} all 3 types are choosen.}
+\item{category}{Valid category, see \code{\link{cur_avail_categories}} for a full list.}
 }
 \value{
 A \link[tibble]{tibble}

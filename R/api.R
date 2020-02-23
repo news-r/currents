@@ -25,10 +25,10 @@ currents_key <- function(key){
 #' Return latest news or specific articles.
 #' 
 #' @param keyword Restict the search to articles that mention a specific keyword.
-#' @param country An \code{ISO 2} country code, full list of valid codes is available at \url{https://currentsapi.services/documents}.
-#' @param language An \code{ISO 2} language code, full list of valid codes is available at \url{https://currentsapi.services/documents}.
+#' @param country An \code{ISO 2} country code, see \code{\link{cur_avail_regions}} for a full list.
+#' @param language An \code{ISO 2} language code, see \code{\link{cur_avail_languages}} for a full lis.
 #' @param start_date,end_date Start and end dates, either as \code{Date} or \code{POSIX}.
-#' @param type Type of content to return \code{1} for news, \code{2} for article and \code{3} for discussion content. If \code{NULL} all 3 types are choosen.
+#' @param category Valid category, see \code{\link{cur_avail_categories}} for a full list.
 #' 
 #' @examples
 #' \dontrun{
@@ -52,7 +52,7 @@ cur_latest <- function(){
 
 #' @rdname news
 #' @export
-cur_search <- function(keyword = NULL, country = NULL, language = NULL, start_date = NULL, end_date = NULL, type = NULL){
+cur_search <- function(keyword = NULL, country = NULL, language = NULL, start_date = NULL, end_date = NULL, category = NULL){
   url <- httr::parse_url(BASE_URL)
   url$path <- c(VERSION, "search")
   url$query <- list(
@@ -61,7 +61,7 @@ cur_search <- function(keyword = NULL, country = NULL, language = NULL, start_da
     language = language, 
     start_date = .process_posix(start_date), 
     end_date = .process_posix(end_date), 
-    type = type
+    category = category
   )
   url <- httr::build_url(url)
   response <- httr::GET(url, httr::add_headers(Authorization = .get_key()))

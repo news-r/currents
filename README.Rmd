@@ -1,8 +1,13 @@
 ---
-output: github_document
+output: 
+  github_document:
+    html_preview: false
 ---
 
+<!-- badges: start -->
+[![AppVeyor build status](https://ci.appveyor.com/api/projects/status/github/news-r/currents?branch=master&svg=true)](https://ci.appveyor.com/project/news-r/currents)
 [![Build Status](https://travis-ci.org/news-r/currents.svg?branch=master)](https://travis-ci.org/news-r/currents)
+<!-- badges: end -->
 
 # currents
 
@@ -28,5 +33,11 @@ currents_key("xXxxXXXxXXxXxx")
 Then use `cur_latest` or `cur_search`.
 
 ```{r}
-cur_search(keyword = "Trump", country = "US")
+currents::cur_search(keyword = "Donald Trump")
+```
+
+You can also filter results by region, country or language.
+
+```{r}
+currents::cur_avail_categories()
 ```
