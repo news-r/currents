@@ -33,7 +33,7 @@ currents_key("xXxxXXXxXXxXxx")
 Then use `cur_latest` or `cur_search`.
 
 ```{r}
-currents::cur_search(keyword = "Donald Trump")
+currents::cur_search(keyword = "Donald Trump", language = "en")
 ```
 
 You can also filter results by region, country or language.
